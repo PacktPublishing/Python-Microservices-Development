@@ -1,0 +1,19 @@
+<h1>Runnerly</h1>
+
+{% if current_user.is_authenticated %}
+  Hi {{ current_user.email }}! <a href="/logout">Log out</a>
+
+  {% if not current_user.strava_token %}
+    <a href="{{strava_auth_url}}">Authorize Strava Access</a>
+  {% else %}
+    <h2>Your last 10 runs</h2>
+    {% for run in runs%}
+      <div>
+      {{run.name}}
+      </div>
+    {% endfor %}
+  {% endif %}
+
+{% else %}
+  Hi Anonymous, <a href="/login">Log in</a>
+{% endif %}

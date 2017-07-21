@@ -1,0 +1,23 @@
+swagger: "2.0"
+info:
+  title: Runnerly Data Service
+  description: returns info about Runnerly
+  license:
+    name: APLv2
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 0.1.0
+basePath: /api
+paths:
+    /user_ids:
+      get:
+        operationId: getUserIds
+        description: Returns a list of ids
+        produces:
+        - application/json
+        responses:
+          '200':
+            description: List of Ids
+            schema:
+                type: array
+                items:
+                    type: integer
