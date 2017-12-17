@@ -29,6 +29,3 @@ To execute the commands and applications in this book, you will need Python 3.x,
 * [Learning Python Application Development](https://www.packtpub.com/application-development/learning-python-application-development?utm_source=github&utm_medium=repository&utm_campaign=9781785889196)
 
 * [wxPython Application Development Cookbook](https://www.packtpub.com/application-development/wxpython-application-development-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781785287732)
-
-### Suggestions and Feedback
-[Click here](https://docs.google.com/forms/d/e/1FAIpQLSe5qwunkGf6PUvzPirPDtuy1Du5Rlzew23UBp2S-P3wB-GcwQ/viewform) if you have any feedback or suggestions.
