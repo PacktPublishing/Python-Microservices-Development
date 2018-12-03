@@ -28,7 +28,7 @@ def timeit(func):
 			if 'timers' not in g:
 				g.timers = defaultdict(functools.partial(deque, maxlen=5))
 			g.timers[func.__name__].append(time.time() - start)
-		return _timeit
+	return _timeit
 
 @timeit
 def fast_stuff():
@@ -45,7 +45,7 @@ def set_view_metrics(view_func):
 			return view_func(*args, **kw)
 		finally:
 			app.logger.info(json.dumps(dict(g.timers), cls=Encoder))
-		return _set_view_metrics
+	return _set_view_metrics
 
 def set_app_metrics(app):
 	for endpoint, func in app.view_functions.items():
@@ -62,7 +62,7 @@ def my_microservice():
 
 if __name__ == '__main__':
 	handler = graypy.GELFHandler('localhost', 12201)
-
-app.logger.addHandler(handler)
-app.logger.setLevel(logging.INFO)
-set_app_metrics(
+	app.logger.addHandler(handler)
+	app.logger.setLevel(logging.INFO)
+	set_app_metrics(app)
+	app.run()
